@@ -1,49 +1,124 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     --dred: #d90429;
-    --red : #ef233c;
-    --grey: #8d99ae; 
+    --red: #ef233c;
+    --grey: #8d99ae;
     --dark: #1d1e2c;
     --text: #edf2f4;
 }
 
-.navbar{
-    background-color: var(--dark)
+.header {
+    color: var(--dark);
+    height: 4rem;
 }
 
-.header{
-    color: var(--grey);
-    height: auto;
+.navbar {
+    vertical-align: middle;
+    background-color: var(--text)
 }
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
-.logo{
-    margin: 12px;
+.logo {
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
-.navigation{
+.navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: auto;
-    padding: 1rem;
+    width: 200px;
 }
 
-a{
-    color:  var(--text);
+.navigation a {
+    font: 1.2rem;
+    font-weight: 500;
+    color: var(--dark);
     text-decoration: none;
+    position: relative;
+    letter-spacing: 0.5px;
+    margin: 0 2rem;
+    transition: 0.3s ease-in-out ;
 }
 
-.contact button{
-    background-color: #d90429;
+.header:hover {
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    transition: 0.3s ease-in-out ;
+}
+
+.contact button {
+    background-color: var(--red);
     border: none;
     border-radius: 10px;
     padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+}
+
+button a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.header img {
+    height: 2rem;
+    transition: 0.3s ease-in-out ;
+    vertical-align: text-top;
+}
+
+.header img:hover {
+    height: 2.2rem;
+    transition: 0.3s ease-in-out ;
+}
+
+.video{
+    padding: 1rem;
+}
+.video video{
+    height: 70vh;
+    width: auto;
+}
+
+
+.product{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-grid{
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+
+
+.product-grid a img{
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.product-grid a img:hover{
+    border-radius: 0px;
+    transition: 0.3s ease-in-out;
 }

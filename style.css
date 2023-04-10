@@ -105,11 +105,11 @@ button a {
     overflow: hidden;
 }
 
-/* .fade {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.498) 60%, rgba(255, 255, 255, 0.665) 100%);
+.fade {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.598) 60%, rgba(0, 0, 0, 0.665));
     height: 100%;
     overflow: hidden;
-} */
+}
 
 .txt {
     overflow: hidden;
@@ -130,23 +130,13 @@ button a {
     justify-content: center;
     align-items: center;
     animation: animate 6s linear infinite;
-}
-
-@keyframes animate {
-    0%,10%,18%,21%,30%,39%,45%,51%,60%,72%,79%,85%,95%
-    {
-        color: rgba(242, 231, 255, 0.467);
-        text-shadow: none;
-    }
-    5%,11%,19%,22%,31%,40%,46%,55%,61%,73%,80%,86%,100%
-    {color: white;
-        filter: brightness(1);
-        text-shadow: 0 0 10px var(--glow),
+    filter: brightness(1);
+    text-shadow: 0 0 10px #ba32feb4,
         0 0 20px var(--glow),
-        0 0 30px var(--glow),
         0 0 40px var(--glow),
-        0 0 45px var(--glow);
-    }
+        0 0 60px var(--glow),
+        0 0 80px var(--glow);
+
 }
 
 

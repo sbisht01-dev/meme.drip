@@ -8,16 +8,28 @@
     --grey: #8d99ae;
     --dark: #1d1e2c;
     --text: #edf2f4;
+    --glow: #d071ffb4;
+    overflow-x: hidden;
+
 }
 
-.header {
-    color: var(--dark);
-    height: 4rem;
+body::-webkit-scrollbar {
+    display: none;
 }
 
-.navbar {
-    vertical-align: middle;
-    background-color: var(--text)
+@font-face {
+    font-family: osake;
+    src: url(/resource/font/osake-font/Osake-x3oqj.otf);
+}
+
+header {
+    z-index: 10;
+    height: 3rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .navbar {
@@ -26,38 +38,35 @@
 }
 
 .logo {
-    color: var(--red);
+    margin: 0.5rem;
     font-weight: 800;
-    letter-spacing: 1px;
-    text-align: center;
+    color: var(--red);
 }
 
 .navigation {
+    margin: 0.5rem;
+    width: 400px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 200px;
+    justify-content: space-around;
 }
 
 .navigation a {
-    font: 1.2rem;
-    font-weight: 500;
-    color: var(--dark);
+    font-weight: 600;
+    font-size: 1rem;
     text-decoration: none;
-    position: relative;
-    letter-spacing: 0.5px;
-    margin: 0 2rem;
-    transition: 0.3s ease-in-out ;
+    color: var(--dark);
+    transition: 0.3s ease-in-out;
+
 }
 
-.header:hover {
-    font-weight: 500;
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    transition: 0.3s ease-in-out ;
+.navigation a:hover {
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
 }
 
 .contact button {
+    overflow: hidden;
     background-color: var(--red);
     border: none;
     border-radius: 10px;
@@ -65,60 +74,130 @@
     font-size: 0.8rem;
     font-weight: 600;
     text-decoration: none;
-    position: absolute;
-    top: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0.4rem;
 }
 
 button a {
-    color: var(--text);
+    color: white;
     text-decoration: none;
 }
 
 .header img {
     height: 2rem;
-    transition: 0.3s ease-in-out ;
-    vertical-align: text-top;
+    transition: 0.3s ease-in-out;
 }
 
 .header img:hover {
     height: 2.2rem;
-    transition: 0.3s ease-in-out ;
+    transition: 0.3s ease-in-out;
 }
 
-.video{
+.hero {
+    z-index: -1;
+    background-image: url("/resource/hero-img/herosection.jpg");
+    background-attachment: fixed;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* .fade {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.498) 60%, rgba(255, 255, 255, 0.665) 100%);
+    height: 100%;
+    overflow: hidden;
+} */
+
+.txt {
+    overflow: hidden;
+    margin: 20px;
+}
+
+.txt p {
+    color: white;
+    position: relative;
+    top: 100px;
+    height: 400px;
+    width: auto;
+    filter: brightness(1);
+    font-family: osake;
+    letter-spacing: 0.1px;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,10%,18%,21%,30%,39%,45%,51%,60%,72%,79%,85%,95%
+    {
+        color: rgba(242, 231, 255, 0.467);
+        text-shadow: none;
+    }
+    5%,11%,19%,22%,31%,40%,46%,55%,61%,73%,80%,86%,100%
+    {color: white;
+        filter: brightness(1);
+        text-shadow: 0 0 10px var(--glow),
+        0 0 20px var(--glow),
+        0 0 30px var(--glow),
+        0 0 40px var(--glow),
+        0 0 45px var(--glow);
+    }
+}
+
+
+.video {
     padding: 1rem;
 }
-.video video{
+
+.video video {
     height: 70vh;
     width: auto;
 }
 
 
-.product{
+.product {
     margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.product-grid{
-    margin:auto;
+.product-grid {
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
 
 
-.product-grid a img{
+.product-grid a img {
     height: 400px;
     width: auto;
-    border-radius: 10px;
     transition: 0.3s ease-in-out;
-
+    border: solid 0px inset;
 }
 
-.product-grid a img:hover{
+.product-grid a img:hover {
     border-radius: 0px;
+    border-radius: 30px;
+    border: solid outset 10px;
+    border-color: var(--red);
     transition: 0.3s ease-in-out;
 }
+
+.showcase {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.showcase :nth-child(1) {}
+
+.showcase :nth-child(2) {}

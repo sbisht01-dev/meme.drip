@@ -80,6 +80,10 @@ header {
     top: 0.4rem;
 }
 
+.contact::-webkit-scrollbar {
+    display: none;
+}
+
 button a {
     color: white;
     text-decoration: none;
@@ -147,6 +151,7 @@ button a {
 .video video {
     height: 70vh;
     width: auto;
+    max-width: 10vw;
 }
 
 

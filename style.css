@@ -151,7 +151,9 @@ button a {
 .video video {
     height: 70vh;
     width: auto;
-    max-width: 10vw;
+    max-width: 20vw;
+    border-radius: 20px;
+    padding: 8x;
 }
 
 
@@ -169,8 +171,6 @@ button a {
     gap: 1rem;
 }
 
-
-
 .product-grid a img {
     height: 400px;
     width: auto;
@@ -180,19 +180,24 @@ button a {
 
 .product-grid a img:hover {
     border-radius: 0px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: solid outset 10px;
     border-color: var(--red);
     transition: 0.3s ease-in-out;
 }
 
 .showcase {
-    z-index: 2;
+    position:sticky;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
 }
 
 
-.showcase :nth-child(1) {}
+.showcase :nth-child(1) {
 
-.showcase :nth-child(2) {}
+}
+
+.showcase :nth-child(2) {
+
+}
